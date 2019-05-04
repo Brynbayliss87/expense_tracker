@@ -1,0 +1,40 @@
+# Logfile created on 2019-05-04 13:52:55 +0100 by logger.rb/66358
+I, [2019-05-04T13:52:55.697989 #24939]  INFO -- : (0.000040s) BEGIN
+I, [2019-05-04T13:52:55.698062 #24939]  INFO -- : Starting example: records submitted expenses
+I, [2019-05-04T13:52:55.710701 #24939]  INFO -- : (0.000174s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('starbucks', 5.75, '2017-06-10')
+I, [2019-05-04T13:52:55.710957 #24939]  INFO -- : (0.000082s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.720056 #24939]  INFO -- : (0.000110s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Zoo', 15.25, '2017-06-10')
+I, [2019-05-04T13:52:55.720298 #24939]  INFO -- : (0.000084s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.720787 #24939]  INFO -- : (0.000037s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Whole Foods', 95.2, '2017-06-11')
+I, [2019-05-04T13:52:55.720943 #24939]  INFO -- : (0.000055s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.722427 #24939]  INFO -- : (0.000346s) SELECT * FROM `expenses` WHERE (`date` = '2017-06-10')
+I, [2019-05-04T13:52:55.723967 #24939]  INFO -- : Ending example: records submitted expenses
+I, [2019-05-04T13:52:55.724242 #24939]  INFO -- : (0.000100s) ROLLBACK
+I, [2019-05-04T13:52:55.725713 #24939]  INFO -- : (0.000026s) BEGIN
+I, [2019-05-04T13:52:55.725777 #24939]  INFO -- : Starting example: successfully saves the expense in the db
+I, [2019-05-04T13:52:55.726081 #24939]  INFO -- : (0.000158s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-06-10')
+I, [2019-05-04T13:52:55.726293 #24939]  INFO -- : (0.000082s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.727539 #24939]  INFO -- : (0.000110s) SELECT * FROM `expenses`
+I, [2019-05-04T13:52:55.728247 #24939]  INFO -- : Ending example: successfully saves the expense in the db
+I, [2019-05-04T13:52:55.728393 #24939]  INFO -- : (0.000084s) ROLLBACK
+I, [2019-05-04T13:52:55.728743 #24939]  INFO -- : (0.000019s) BEGIN
+I, [2019-05-04T13:52:55.728793 #24939]  INFO -- : Starting example: rejects the invalid expense
+I, [2019-05-04T13:52:55.729058 #24939]  INFO -- : (0.000073s) SELECT count(*) AS 'count' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.729110 #24939]  INFO -- : Ending example: rejects the invalid expense
+I, [2019-05-04T13:52:55.729173 #24939]  INFO -- : (0.000021s) ROLLBACK
+I, [2019-05-04T13:52:55.729444 #24939]  INFO -- : (0.000017s) BEGIN
+I, [2019-05-04T13:52:55.729486 #24939]  INFO -- : Starting example: returns all expenses for the provided date
+I, [2019-05-04T13:52:55.729705 #24939]  INFO -- : (0.000111s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-06-10')
+I, [2019-05-04T13:52:55.729870 #24939]  INFO -- : (0.000061s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.729986 #24939]  INFO -- : (0.000034s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-06-10')
+I, [2019-05-04T13:52:55.730128 #24939]  INFO -- : (0.000049s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.730239 #24939]  INFO -- : (0.000032s) INSERT INTO `expenses` (`payee`, `amount`, `date`) VALUES ('Starbucks', 5.75, '2017-06-11')
+I, [2019-05-04T13:52:55.730379 #24939]  INFO -- : (0.000049s) SELECT max(`id`) AS 'max' FROM `expenses` LIMIT 1
+I, [2019-05-04T13:52:55.730584 #24939]  INFO -- : (0.000115s) SELECT * FROM `expenses` WHERE (`date` = '2017-06-10')
+I, [2019-05-04T13:52:55.730700 #24939]  INFO -- : Ending example: returns all expenses for the provided date
+I, [2019-05-04T13:52:55.730809 #24939]  INFO -- : (0.000064s) ROLLBACK
+I, [2019-05-04T13:52:55.731035 #24939]  INFO -- : (0.000018s) BEGIN
+I, [2019-05-04T13:52:55.731077 #24939]  INFO -- : Starting example: returns an empty array when there are no matching expenses
+I, [2019-05-04T13:52:55.731236 #24939]  INFO -- : (0.000075s) SELECT * FROM `expenses` WHERE (`date` = '2017-06-10')
+I, [2019-05-04T13:52:55.731285 #24939]  INFO -- : Ending example: returns an empty array when there are no matching expenses
+I, [2019-05-04T13:52:55.731351 #24939]  INFO -- : (0.000020s) ROLLBACK
